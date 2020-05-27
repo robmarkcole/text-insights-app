@@ -4,8 +4,8 @@ Provides a single `process` endpoint.
 Build and run the Docker image, exposing the endpoint on port 5000:
 
 ```
-$ docker build -t tesseract-engine .
-$ docker run -p 5000:5000 tesseract-engine
+docker build -t tesseract-engine .
+docker run -p 5000:5000 tesseract-engine
 ```
 
 From the root directory of this repo run: `curl -X POST -F image=@assets/text1.jpg 'http://localhost:5000/process'` which should return:
