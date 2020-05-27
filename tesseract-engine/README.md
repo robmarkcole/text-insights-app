@@ -8,6 +8,8 @@ docker build -t tesseract-engine .
 docker run -p 5000:5000 tesseract-engine
 ```
 
+Alternatively pull from dockerhub: `docker run -p 5000:5000 robmarkcole/tesseract-engine:latest`
+
 From the root directory of this repo run: `curl -X POST -F image=@assets/text1.jpg 'http://localhost:5000/process'` which should return:
 ```
 {

@@ -1,0 +1,1 @@
+Manually run from you venv with `streamlit run ui.py`
