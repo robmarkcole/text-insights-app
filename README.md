@@ -4,6 +4,10 @@ Upload an image of a document and extract text, names, facts and figures
 * Streamlit UI -> https://github.com/robmarkcole/object-detection-app
 * docker-compose up
 
+<p align="center">
+<img src="https://github.com/robmarkcole/text-insights-app/blob/master/assets/usage.jpg" width="700">
+</p>
+
 ## References
 * https://github.com/patidarparas13/Sentiment-Analyzer-Tool
 * [Radiological report analytics](https://twitter.com/beringresearch/status/1257623872465240064)
