@@ -1,0 +1,4 @@
+streamlit==0.60.0
+requests==2.23.0
+Pillow==7.1.2
+numpy==1.15.4
