@@ -1,15 +1,19 @@
+import io
 import flask
 from PIL import Image
 import pytesseract
 
-__source__ = ""
-
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 
-@app.route("process", methods=["POST"])
+@app.route("/")
+def info():
+    return """Flask app exposing tesseract OCR"""
+
+
+@app.route("/process", methods=["POST"])
 def process_file():
-    data = {"success": False}
+    data = {"success": "false"}
     if not flask.request.method == "POST":
         return
 
@@ -19,7 +23,7 @@ def process_file():
         pil_image = Image.open(io.BytesIO(image_bytes))
         text = pytesseract.image_to_string(pil_image)
         data["text"] = text
-        data = {"success": True}
+        data["success"] = "true"
     return flask.jsonify(data)
 
 
