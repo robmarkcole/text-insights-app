@@ -1,10 +1,14 @@
 import streamlit as st
 from PIL import Image
 import io
+import os
 import numpy as np
 import requests
 
-API_URL = "http://localhost:5000/process"
+TESSERACT_API_IP = os.getenv("TESSERACT_API_IP", "localhost")
+TESSERACT_API_PORT = os.getenv("TESSERACT_API_PORT", 5000)
+
+API_URL = f"http://{TESSERACT_API_IP}:{TESSERACT_API_PORT}/process"
 DEMO_IMAGE = "text1.jpg"
 
 
