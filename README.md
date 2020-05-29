@@ -13,3 +13,4 @@ Upload an image of a document and extract text, names, facts and figures
 * [Radiological report analytics](https://twitter.com/beringresearch/status/1257623872465240064)
 * [twitter sentiment](https://twitter.com/zachrenwick/status/1258664133764890624)
 * [Summarization using bert model (pytorch)](https://github.com/holladileep/TextSummarizationPipeline-AWS)
+* [Named entity example](https://maelfabien.github.io/project/Streamlit/#dockerfile)
