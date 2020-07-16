@@ -9,8 +9,6 @@ docker build -t tesseract-engine .
 docker run -p 8000:8000 tesseract-engine
 ```
 
-Alternatively pull from dockerhub: `docker run -p 8000:8000 robmarkcole/tesseract-engine:latest`
-
 From the root directory of this repo run: `curl -X POST "http://127.0.0.1:8000/process/" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -F "file=@assets/text1.jpg;type=image/jpeg"` which should return:
 ```
 {
