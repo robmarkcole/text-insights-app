@@ -14,7 +14,7 @@ Alternatively pull from dockerhub: `docker run -p 8000:8000 robmarkcole/tesserac
 From the root directory of this repo run: `curl -X POST "http://127.0.0.1:8000/process/" -H  "accept: application/json" -H  "Content-Type: multipart/form-data" -F "file=@assets/text1.jpg;type=image/jpeg"` which should return:
 ```
 {
-  "success": "true", 
+  "success": "true",
   "text": "This is the first line of\nthis text example.\n\nThis is the second line\nof the same text."
 }
 ```
