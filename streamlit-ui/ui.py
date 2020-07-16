@@ -4,11 +4,12 @@ import io
 import os
 import numpy as np
 import requests
+from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 TESSERACT_API_IP = os.getenv("TESSERACT_API_IP", "localhost")
-TESSERACT_API_PORT = os.getenv("TESSERACT_API_PORT", 5000)
+TESSERACT_API_PORT = os.getenv("TESSERACT_API_PORT", 8000)
 
-API_URL = f"http://{TESSERACT_API_IP}:{TESSERACT_API_PORT}/process"
+API_URL = f"http://{TESSERACT_API_IP}:{TESSERACT_API_PORT}/process/"
 DEMO_IMAGE = "text1.jpg"
 
 
@@ -20,12 +21,20 @@ def pil_image_to_byte_array(image):
 
 @st.cache
 def process_image(image_bytes):
-    response = requests.post(API_URL, files={"image": image_bytes})
+    m = MultipartEncoder(
+        fields={"file": ("filename", image_bytes, "image/jpeg")}
+    )
+
+    response = requests.post(
+        API_URL, data=m, headers={"Content-Type": m.content_type}, timeout=8000,
+    )
     return response
 
 
 st.title("OCR with Tesseract")
-img_file_buffer = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
+img_file_buffer = st.file_uploader(
+    "Upload an image", type=["png", "jpg", "jpeg"]
+)
 
 
 if img_file_buffer is not None:

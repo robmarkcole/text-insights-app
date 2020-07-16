@@ -22,3 +22,7 @@ From the root directory of this repo run: `curl -X POST "http://127.0.0.1:8000/p
 ## Using a venv
 ```
 source venv/bin/activate
+cd tesseract-engine
+uvicorn main:app --reload
+```
+The API docs can be viewed at `localhost:8000/docs`
