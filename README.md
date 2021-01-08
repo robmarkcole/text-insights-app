@@ -1,8 +1,7 @@
 # text-insights-app
-Upload an image of a document and extract text, names, facts and figures
-* Text extraction via tesseract in a docker container -> https://github.com/robmarkcole/ocr-tesseract-docker
-* Streamlit UI -> https://github.com/robmarkcole/object-detection-app
-* docker-compose up
+Upload an image of a document and extract text, names, facts and figures. Use tesseract for OCR.
+* First follow the readme in `tesseract-engine` then follow the readme in `streamlit-ui`
+* todo: add docker-compose up
 
 <p align="center">
 <img src="https://github.com/robmarkcole/text-insights-app/blob/master/assets/usage.jpg" width="700">
