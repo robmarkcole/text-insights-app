@@ -1,6 +1,6 @@
 numpy==1.22.0
 pillow>=6.2.0
 pytesseract==0.2.6
-fastapi==0.59.0
+fastapi==0.65.2
 uvicorn==0.11.7
 python-multipart
