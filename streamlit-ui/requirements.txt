@@ -1,4 +1,4 @@
-streamlit==1.11.1
+streamlit==1.30.0
 requests>=2.23.0
 requests-toolbelt>=0.9.1
 Pillow>=7.1.2
